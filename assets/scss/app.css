@@ -167,6 +167,17 @@ body {
   margin: 24px auto;
   gap: 43px;
 }
+@media (max-width: 1200px) {
+  .ahorro {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .ahorro {
+    grid-template-columns: 1fr;
+    padding: 0 auto;
+  }
+}
 .ahorro .target {
   width: 418;
   height: 162px;
@@ -176,6 +187,7 @@ body {
   gap: 18px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .ahorro .target .contenedor {
   display: flex;
