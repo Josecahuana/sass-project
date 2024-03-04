@@ -1,0 +1,27 @@
+.titulo{
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 140px;
+    gap: 8px;
+    border: 0 0 1px 0;
+    padding: 36px 48px;
+    
+    &__heading{
+        max-width: 383px;
+        height: 40px;
+        color: #121212;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        flex: 1;
+    }
+    &__parrafo{
+        max-width: 383px;
+        height: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5B6776;
+    }
+}

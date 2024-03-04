@@ -1,0 +1,134 @@
+/*USES*/
+@use '../module/mixin-grafico';
+
+.ahorro{
+    min-width: calc(100% - 96px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 24px auto;
+    gap: 43px;
+
+    .target{
+        width: 418;
+        height: 162px;
+        border-radius: 6px;
+        border: 1px solid #E2E8F0;
+        padding: 24px;
+        gap: 18px;
+        display: flex;
+        flex-direction: column;
+
+        .contenedor{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 370px;
+            height: 58px;
+            
+            .card{
+                display: flex;
+                align-items: center;
+                width: 370px;
+                height: 32px;
+                gap: 12px;
+
+                &__imagen{
+                    width: 32px;
+                    height: 32px;
+                }
+                &__heading{
+                    width: 326px;
+                    height: 20px;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: -2%;
+                    color: #344055;
+                }
+            }
+            
+            &__texto{
+                width: 370px;
+                height: 18px;
+                color: #79808A;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+        .datos{
+            width: 370px;
+            height: 38px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            .dato{
+                width: 370px;
+                height: 24px;
+                display: flex;
+                justify-content: space-between;
+
+                &__costo{
+                    width: 200px;
+                    height: 24px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: -2%;
+                    font-weight: 400;
+                    color: #4F46E5;
+                }
+                &__span{
+                    color: #B8B6F7;
+                    font-size: 12px;
+                    line-height: 18px;
+                    font-weight: 400;
+                }
+
+                &__porcentaje{
+                    width: 29px;
+                    height: 20px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    color: #5B6776;
+                }
+            }
+            .grafico{
+                display: flex;
+                width: 370px;
+                height: 10px;
+                background-color: #F7F8FD;
+
+                &__cena{
+                    @include mixin-grafico.grafico-style(189.4px);
+                }
+
+                &__viaje{
+                    @include mixin-grafico.grafico-style(225.5px);
+                }
+
+                &__maestria{
+                    @include mixin-grafico.grafico-style(283.3px);
+                }
+
+                &__almuerzo{
+                    width: 187.4px;
+                    @include mixin-grafico.grafico-style(187.4px);
+                }
+
+                &__construir{
+                    @include mixin-grafico.grafico-style(337.1px);
+                }
+
+                &__donacion{
+                    @include mixin-grafico.grafico-style(133.8px);
+                }
+
+            }
+            
+        }
+}
+
+}

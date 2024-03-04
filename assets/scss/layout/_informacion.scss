@@ -1,0 +1,102 @@
+.information{
+    display: flex;
+    flex-direction: row;    
+    width: calc(100% - 96px);
+    height: 160px;
+    margin: 0 auto;
+    gap: 21px;
+    
+        .saldo{
+            width: 920px;
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            padding: 16px 24px 16px 24px;
+            gap: 21px;
+            border: 1px solid #E2E8F0;
+            border-radius: 6px;
+            position: relative;
+            flex: 1;
+            
+            .usuario{
+                display: flex;
+                width: 863px;
+                height: 40px;
+                gap: 18px;
+                align-items: center;
+                &__saludo{
+                    width: 32px;
+                    height: 40px;
+                }
+
+                &__nombre{
+                    width: 127px;
+                    height: 32px;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #121212;
+                }
+            }
+            
+            &__monto{
+                width: 872px;
+                height: 40px;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: -2.4%;
+                color: #344055;
+            }
+            &__option{
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                width: 18px;
+                height: 18px;
+            }
+        }
+        .retiro{
+            max-width: 398px;
+            height: 160px;
+            border: 1px solid #E2E8F0;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 30px 24px;
+            position: relative;
+            
+            .retirar{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                width: 152px;
+                height: 100px;
+                
+                &__imagen{
+                    width: 64px;
+                    height: 64px;
+                }
+                &__texto{
+                    width: 152px;
+                    height: 20px;
+                    color: #344055;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-align: center;
+                }
+            }
+
+            &__line{
+                background-color: #E3E8EF;
+                width: 1.5px;
+                height: 160px;
+                position: absolute;
+                top: 0;
+                right: 50%;
+            }
+
+        } 
+}

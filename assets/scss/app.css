@@ -64,7 +64,6 @@ body {
   color: #5B6776;
 }
 
-/**************************************************************/
 .information {
   display: flex;
   flex-direction: row;
@@ -160,7 +159,7 @@ body {
   right: 50%;
 }
 
-/**/
+/*USES*/
 .ahorro {
   min-width: calc(100% - 96px);
   display: grid;
@@ -275,6 +274,7 @@ body {
 }
 .ahorro .target .datos .grafico__almuerzo {
   width: 187.4px;
+  width: 187.4px;
   height: 10px;
   border-radius: 6px;
   background-color: #4F46E5;
@@ -323,5 +323,28 @@ body {
   font-size: 18px;
   line-height: 24px;
   letter-spacing: -2%;
+  color: #4F46E5;
+}
+
+h2 {
+  color: #344055;
+  color: #E2E8F0;
+  color: #121212;
+  color: #5B6776;
+  color: #E2E8F0;
+  color: #121212;
+  color: #344055;
+  color: #E2E8F0;
+  color: #344055;
+  color: #E3E8EF;
+  color: #E2E8F0;
+  color: #79808A;
+  color: #4F46E5;
+  color: #B8B6F7;
+  background-color: #F7F8FD;
+  background-color: #4F46E5;
+  color: #E2E8F0;
+  color: #F7F8FD;
+  color: #4F46E5;
   color: #4F46E5;
 }/*# sourceMappingURL=app.css.map */

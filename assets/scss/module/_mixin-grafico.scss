@@ -1,0 +1,6 @@
+@mixin grafico-style($width){
+    width: $width;
+    height: 10px;
+    border-radius: 6px;
+    background-color: #4F46E5;
+}
