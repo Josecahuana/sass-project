@@ -1,0 +1,14 @@
+@mixin size-imagen($width, $heigth){
+    width: $width;
+    height: $heigth;
+}
+
+@mixin titulo-style($width, $height, $color, $font-weight, $font-size, $line-height, $flex){
+    width: $width;
+    height: $height;
+    color: $color;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    flex: $flex;
+}

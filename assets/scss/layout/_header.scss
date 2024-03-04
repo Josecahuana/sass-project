@@ -1,26 +1,25 @@
+@use '../theme/variable';
+@use '../module/mixin-header';
+
 .header{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #E2E8F0;
+    border-bottom: 1px solid variable.$color-secondary;
     min-width: 1440px;
     height: 104px;
     padding: 36px 48px;
 
     .contenedor{
         display: flex;
-        width: 88px;
-        height: 32px;
+        @include mixin-header.size-imagen(83px, 32px);
         gap: 24px;
         flex: 1;
         &__imagen{
-            width: 22.4px;
-            height: 22.4px;
+            @include mixin-header.size-imagen(22.4px, 22.4px);
         }
     }
 
     &__img{
-        width: 22.4px;
-        height: 22.4px;
-        flex: 0;
+        @include mixin-header.size-imagen(22.4px, 22.4px);
     }
 }

@@ -1,14 +1,15 @@
+@use '../theme/variable';
+@use '../module/mixin-header';
+
 .information{
     display: flex;
     flex-direction: row;    
-    width: calc(100% - 96px);
-    height: 160px;
+    @include mixin-header.size-imagen(calc(100% - 96px), 160px);
     margin: 0 auto;
     gap: 21px;
     
         .saldo{
-            width: 920px;
-            height: 160px;
+            @include mixin-header.size-imagen(920px, 160px);
             display: flex;
             flex-direction: column;
             padding: 16px 24px 16px 24px;
@@ -20,18 +21,15 @@
             
             .usuario{
                 display: flex;
-                width: 863px;
-                height: 40px;
+                @include mixin-header.size-imagen(863px, 40px);
                 gap: 18px;
                 align-items: center;
                 &__saludo{
-                    width: 32px;
-                    height: 40px;
+                    @include mixin-header.size-imagen(32px, 40px);
                 }
 
                 &__nombre{
-                    width: 127px;
-                    height: 32px;
+                    @include mixin-header.size-imagen(127px, 32px);
                     font-weight: 700;
                     font-size: 24px;
                     color: #121212;
@@ -39,8 +37,7 @@
             }
             
             &__monto{
-                width: 872px;
-                height: 40px;
+                @include mixin-header.size-imagen(872px, 40px);
                 font-weight: 400;
                 font-size: 32px;
                 line-height: 40px;
@@ -48,11 +45,10 @@
                 color: #344055;
             }
             &__option{
+                @include mixin-header.size-imagen(18px, 18px);
                 position: absolute;
                 top: 16px;
                 right: 16px;
-                width: 18px;
-                height: 18px;
             }
         }
         .retiro{
@@ -71,16 +67,13 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 10px;
-                width: 152px;
-                height: 100px;
+                @include mixin-header.size-imagen(152px, 100px);
                 
                 &__imagen{
-                    width: 64px;
-                    height: 64px;
+                    @include mixin-header.size-imagen(64px, 64px);
                 }
                 &__texto{
-                    width: 152px;
-                    height: 20px;
+                    @include mixin-header.size-imagen(152px, 20px);
                     color: #344055;
                     font-weight: 600;
                     font-size: 14px;
@@ -90,9 +83,8 @@
             }
 
             &__line{
+                @include mixin-header.size-imagen(1.5px, 160px);
                 background-color: #E3E8EF;
-                width: 1.5px;
-                height: 160px;
                 position: absolute;
                 top: 0;
                 right: 50%;

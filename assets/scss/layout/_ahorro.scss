@@ -1,6 +1,7 @@
 /*USES*/
 @use '../module/mixin-grafico';
 @use '../module/mixin-ahorro-responsive';
+@use '../theme/variable';
 
 .ahorro{
     min-width: calc(100% - 96px);
@@ -11,15 +12,17 @@
     @include mixin-ahorro-responsive.grid-responsive-1200;
     @include mixin-ahorro-responsive.grid-responsive-900;
     .target{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px;
+        gap: 18px;
         width: 418;
         height: 162px;
         border-radius: 6px;
         border: 1px solid #E2E8F0;
-        padding: 24px;
-        gap: 18px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        
+        
 
         .contenedor{
             display: flex;
