@@ -6,11 +6,9 @@
 .ahorro{
     min-width: calc(100% - 96px);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(418px, 1fr));
     margin: 24px auto;
     gap: 43px;
-    @include mixin-ahorro-responsive.grid-responsive-1200;
-    @include mixin-ahorro-responsive.grid-responsive-900;
     .target{
         display: flex;
         flex-direction: column;
@@ -21,8 +19,6 @@
         height: 162px;
         border-radius: 6px;
         border: 1px solid #E2E8F0;
-        
-        
 
         .contenedor{
             display: flex;

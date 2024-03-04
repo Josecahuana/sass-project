@@ -1,15 +1,19 @@
 @use '../theme/variable';
-@use '../module/mixin-header';
+@use '../module/mixin-cambios';
+@use '../module/mixin-ahorro-responsive';
 
 .information{
     display: flex;
     flex-direction: row;    
-    @include mixin-header.size-imagen(calc(100% - 96px), 160px);
+    @include mixin-cambios.size-imagen(calc(100% - 96px), 160px);
     margin: 0 auto;
     gap: 21px;
+    @include mixin-ahorro-responsive.columnas;
     
         .saldo{
-            @include mixin-header.size-imagen(920px, 160px);
+            height: 160px;
+            @include mixin-ahorro-responsive.saldo;
+            // @include mixin-cambios.size-imagen(920px, 160px);
             display: flex;
             flex-direction: column;
             padding: 16px 24px 16px 24px;
@@ -21,15 +25,16 @@
             
             .usuario{
                 display: flex;
-                @include mixin-header.size-imagen(863px, 40px);
+                height: 40px;
                 gap: 18px;
                 align-items: center;
+                flex: 1;
                 &__saludo{
-                    @include mixin-header.size-imagen(32px, 40px);
+                    @include mixin-cambios.size-imagen(32px, 40px);
                 }
 
                 &__nombre{
-                    @include mixin-header.size-imagen(127px, 32px);
+                    @include mixin-cambios.size-imagen(127px, 32px);
                     font-weight: 700;
                     font-size: 24px;
                     color: #121212;
@@ -37,15 +42,16 @@
             }
             
             &__monto{
-                @include mixin-header.size-imagen(872px, 40px);
+                height: 40px;
                 font-weight: 400;
                 font-size: 32px;
                 line-height: 40px;
                 letter-spacing: -2.4%;
                 color: #344055;
+                flex: 1;
             }
             &__option{
-                @include mixin-header.size-imagen(18px, 18px);
+                @include mixin-cambios.size-imagen(18px, 18px);
                 position: absolute;
                 top: 16px;
                 right: 16px;
@@ -67,13 +73,13 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 10px;
-                @include mixin-header.size-imagen(152px, 100px);
+                @include mixin-cambios.size-imagen(152px, 100px);
                 
                 &__imagen{
-                    @include mixin-header.size-imagen(64px, 64px);
+                    @include mixin-cambios.size-imagen(64px, 64px);
                 }
                 &__texto{
-                    @include mixin-header.size-imagen(152px, 20px);
+                    @include mixin-cambios.size-imagen(152px, 20px);
                     color: #344055;
                     font-weight: 600;
                     font-size: 14px;
@@ -83,7 +89,7 @@
             }
 
             &__line{
-                @include mixin-header.size-imagen(1.5px, 160px);
+                @include mixin-cambios.size-imagen(1.5px, 160px);
                 background-color: #E3E8EF;
                 position: absolute;
                 top: 0;

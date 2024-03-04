@@ -1,14 +1,14 @@
-@mixin grid-responsive-1200{
-    @media (max-width: 1200px){
-        grid-template-columns: repeat(2, 1fr);
-        
+@mixin columnas{
+    @media (max-width: 768px){
+        flex-direction: column;
+        height: 341px;
+        align-items: center;
     }
 }
 
-@mixin grid-responsive-900{
-    @media (max-width: 900px){
-        grid-template-columns: 1fr;
-        padding: 0 auto;
-
+@mixin saldo{
+    @media (max-width:768px){
+        width: 100%;
+        flex: 0;
     }
 }

@@ -1,25 +1,24 @@
 @use '../theme/variable';
-@use '../module/mixin-header';
+@use '../module/mixin-cambios';
 
 .header{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid variable.$color-secondary;
-    min-width: 1440px;
     height: 104px;
     padding: 36px 48px;
 
     .contenedor{
         display: flex;
-        @include mixin-header.size-imagen(83px, 32px);
+        @include mixin-cambios.size-imagen(83px, 32px);
         gap: 24px;
-        flex: 1;
+
         &__imagen{
-            @include mixin-header.size-imagen(22.4px, 22.4px);
+            @include mixin-cambios.size-imagen(22.4px, 22.4px);
         }
     }
 
     &__img{
-        @include mixin-header.size-imagen(22.4px, 22.4px);
+        @include mixin-cambios.size-imagen(22.4px, 22.4px);
     }
 }

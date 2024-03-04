@@ -16,7 +16,6 @@ body {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #E2E8F0;
-  min-width: 1440px;
   height: 104px;
   padding: 36px 48px;
 }
@@ -25,7 +24,6 @@ body {
   width: 83px;
   height: 32px;
   gap: 24px;
-  flex: 1;
 }
 .header .contenedor__imagen {
   width: 22.4px;
@@ -39,10 +37,8 @@ body {
 .titulo {
   display: flex;
   flex-direction: column;
-  width: 1440px;
   height: 140px;
   gap: 8px;
-  border: 0 0 1px 0;
   padding: 36px 48px;
 }
 .titulo__heading {
@@ -72,8 +68,14 @@ body {
   margin: 0 auto;
   gap: 21px;
 }
+@media (max-width: 768px) {
+  .information {
+    flex-direction: column;
+    height: 341px;
+    align-items: center;
+  }
+}
 .information .saldo {
-  width: 920px;
   height: 160px;
   display: flex;
   flex-direction: column;
@@ -84,12 +86,18 @@ body {
   position: relative;
   flex: 1;
 }
+@media (max-width: 768px) {
+  .information .saldo {
+    width: 100%;
+    flex: 0;
+  }
+}
 .information .saldo .usuario {
   display: flex;
-  width: 863px;
   height: 40px;
   gap: 18px;
   align-items: center;
+  flex: 1;
 }
 .information .saldo .usuario__saludo {
   width: 32px;
@@ -103,13 +111,13 @@ body {
   color: #121212;
 }
 .information .saldo__monto {
-  width: 872px;
   height: 40px;
   font-weight: 400;
   font-size: 32px;
   line-height: 40px;
   letter-spacing: -2.4%;
   color: #344055;
+  flex: 1;
 }
 .information .saldo__option {
   width: 18px;
@@ -163,20 +171,9 @@ body {
 .ahorro {
   min-width: calc(100% - 96px);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(418px, 1fr));
   margin: 24px auto;
   gap: 43px;
-}
-@media (max-width: 1200px) {
-  .ahorro {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 900px) {
-  .ahorro {
-    grid-template-columns: 1fr;
-    padding: 0 auto;
-  }
 }
 .ahorro .target {
   display: flex;

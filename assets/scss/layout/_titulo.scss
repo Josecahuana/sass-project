@@ -1,18 +1,18 @@
 @use '../theme/variable';
-@use '../module/mixin-header';
+@use '../module/mixin-cambios';
 
 .titulo{
     display: flex;
     flex-direction: column;
-    @include mixin-header.size-imagen(1440px, 140px);
+    height: 140px;
+    // @include mixin-cambios.size-imagen(1440px, 140px);
     gap: 8px;
-    border: 0 0 1px 0;
     padding: 36px 48px;
     
     &__heading{
-        @include mixin-header.titulo-style(383px, 40px, #121212, 700, 32px, 40px, 1);
+        @include mixin-cambios.titulo-style(383px, 40px, #121212, 700, 32px, 40px, 1);
     }
     &__parrafo{
-        @include mixin-header.titulo-style(383px, 20px, #586776, 400, 14px, 20px, 0);
+        @include mixin-cambios.titulo-style(383px, 20px, #586776, 400, 14px, 20px, 0);
     }
 }
