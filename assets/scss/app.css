@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  font-family: "Inter", sans-serif;
 }
 
 .header {
@@ -19,15 +20,74 @@ body {
   height: 104px;
   padding: 36px 48px;
 }
+@media (max-width: 360px) {
+  .header {
+    align-items: center;
+    height: 52px;
+    padding: 12px 16px;
+  }
+}
 .header .contenedor {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 83px;
   height: 32px;
   gap: 24px;
 }
-.header .contenedor__imagen {
+@media (max-width: 360px) {
+  .header .contenedor {
+    gap: 4px;
+    width: 93px;
+    height: 23px;
+    padding: 4px 12px;
+  }
+}
+.header .contenedor__img--create {
   width: 22.4px;
   height: 22.4px;
+}
+@media (max-width: 1440px) {
+  .header .contenedor__img--create {
+    width: 22.4px;
+    height: 22.4px;
+    background-image: url("/assets/img/Icon-2.svg");
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 360px) {
+  .header .contenedor__img--create {
+    width: 13px;
+    height: 15px;
+    background-image: unset;
+    background-image: url(/assets/img/Union.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+@media (max-width: 1440px) {
+  .header .contenedor__img--text {
+    width: 22.4px;
+    height: 22.4px;
+    background-image: url("/assets/img/Icon-3.svg");
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 360px) {
+  .header .contenedor__img--text {
+    background-image: unset;
+    width: 56px;
+    height: 15px;
+  }
+  .header .contenedor__img--text::before {
+    content: "Ahorra Ya";
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 14.52px;
+    letter-spacing: -4%;
+    color: #4F46E5;
+  }
 }
 .header__img {
   width: 22.4px;
@@ -40,6 +100,14 @@ body {
   height: 140px;
   gap: 8px;
   padding: 36px 48px;
+}
+@media (max-width: 360px) {
+  .titulo {
+    height: 85px;
+    padding: 18px 16px;
+    gap: 0;
+    margin-bottom: 5px;
+  }
 }
 .titulo__heading {
   width: 383px;
@@ -63,16 +131,15 @@ body {
 .information {
   display: flex;
   flex-direction: row;
-  width: calc(100% - 96px);
+  min-width: calc(100% - 96px);
   height: 160px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   gap: 21px;
 }
-@media (max-width: 768px) {
+@media (max-width: 360px) {
   .information {
+    width: calc(100% - 32px);
     flex-direction: column;
-    height: 341px;
-    align-items: center;
   }
 }
 .information .saldo {
@@ -92,16 +159,36 @@ body {
     flex: 0;
   }
 }
+@media (max-width: 360px) {
+  .information .saldo {
+    height: 87px;
+    padding: 16px 12px;
+    gap: 0;
+  }
+}
 .information .saldo .usuario {
   display: flex;
   height: 40px;
   gap: 18px;
-  align-items: center;
+  align-content: center;
   flex: 1;
+}
+@media (max-width: 360px) {
+  .information .saldo .usuario {
+    width: 301px;
+    height: 32px;
+    gap: 12px;
+  }
 }
 .information .saldo .usuario__saludo {
   width: 32px;
-  height: 40px;
+  height: 32px;
+}
+@media (max-width: 360px) {
+  .information .saldo .usuario__saludo {
+    width: 18px;
+    height: 24px;
+  }
 }
 .information .saldo .usuario__nombre {
   width: 127px;
@@ -109,6 +196,17 @@ body {
   font-weight: 700;
   font-size: 24px;
   color: #121212;
+}
+@media (max-width: 360px) {
+  .information .saldo .usuario__nombre {
+    width: 83px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    text-align: left;
+  }
 }
 .information .saldo__monto {
   height: 40px;
@@ -119,12 +217,28 @@ body {
   color: #344055;
   flex: 1;
 }
+@media (max-width: 360px) {
+  .information .saldo__monto {
+    width: 79px;
+    height: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+}
 .information .saldo__option {
   width: 18px;
   height: 18px;
   position: absolute;
   top: 16px;
   right: 16px;
+}
+@media (max-width: 360px) {
+  .information .saldo__option {
+    top: 18px;
+  }
 }
 .information .retiro {
   max-width: 398px;
@@ -137,6 +251,15 @@ body {
   padding: 30px 24px;
   position: relative;
 }
+@media (max-width: 360px) {
+  .information .retiro {
+    min-width: calc(100% - 32px);
+    height: 92px;
+    padding: 12px 24px;
+    box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.031372549);
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.0784313725);
+  }
+}
 .information .retiro .retirar {
   display: flex;
   flex-direction: column;
@@ -145,9 +268,22 @@ body {
   width: 152px;
   height: 100px;
 }
+@media (max-width: 360px) {
+  .information .retiro .retirar {
+    width: 120px;
+    height: 68px;
+    gap: 8px;
+  }
+}
 .information .retiro .retirar__imagen {
   width: 64px;
   height: 64px;
+}
+@media (max-width: 360px) {
+  .information .retiro .retirar__imagen {
+    width: 40px;
+    height: 40px;
+  }
 }
 .information .retiro .retirar__texto {
   width: 152px;
@@ -158,6 +294,13 @@ body {
   line-height: 20px;
   text-align: center;
 }
+@media (max-width: 360px) {
+  .information .retiro .retirar__texto {
+    width: 120;
+    height: 18;
+    font-size: 12px;
+  }
+}
 .information .retiro__line {
   width: 1.5px;
   height: 160px;
@@ -165,6 +308,11 @@ body {
   position: absolute;
   top: 0;
   right: 50%;
+}
+@media (max-width: 360px) {
+  .information .retiro__line {
+    height: 96px;
+  }
 }
 
 /*USES*/
@@ -174,6 +322,15 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(418px, 1fr));
   margin: 24px auto;
   gap: 43px;
+}
+@media (max-width: 360px) {
+  .ahorro {
+    width: 328px;
+    height: 820px;
+    gap: 8px;
+    grid-template-rows: 1fr;
+    margin: 24px auto 12px auto;
+  }
 }
 .ahorro .target {
   display: flex;
@@ -186,25 +343,53 @@ body {
   border-radius: 6px;
   border: 1px solid #E2E8F0;
 }
-.ahorro .target .contenedor {
+@media (max-width: 360px) {
+  .ahorro .target {
+    width: 328px;
+    height: 130px;
+    padding: 18px 24px;
+    gap: 8px;
+  }
+}
+.ahorro .contenedor {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 370px;
   height: 58px;
 }
-.ahorro .target .contenedor .card {
+@media (max-width: 360px) {
+  .ahorro .contenedor {
+    width: 280px;
+    height: 50px;
+    gap: 2px;
+  }
+}
+.ahorro .contenedor .card {
   display: flex;
   align-items: center;
   width: 370px;
   height: 32px;
   gap: 12px;
 }
-.ahorro .target .contenedor .card__imagen {
+@media (max-width: 360px) {
+  .ahorro .contenedor .card {
+    width: 280;
+    height: 32;
+    gap: 12;
+  }
+}
+.ahorro .contenedor .card__imagen {
   width: 32px;
   height: 32px;
 }
-.ahorro .target .contenedor .card__heading {
+@media (max-width: 360px) {
+  .ahorro .contenedor .card__imagen {
+    width: 18px;
+    height: 18px;
+  }
+}
+.ahorro .contenedor .card__heading {
   width: 326px;
   height: 20px;
   font-weight: 600;
@@ -213,7 +398,17 @@ body {
   letter-spacing: -2%;
   color: #344055;
 }
-.ahorro .target .contenedor__texto {
+@media (max-width: 360px) {
+  .ahorro .contenedor .card__heading {
+    width: 236px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+.ahorro .contenedor__texto {
   width: 370px;
   height: 18px;
   color: #79808A;
@@ -221,20 +416,44 @@ body {
   font-size: 12px;
   line-height: 18px;
 }
-.ahorro .target .datos {
+@media (max-width: 360px) {
+  .ahorro .contenedor__texto {
+    width: 280px;
+    height: 16px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+.ahorro .datos {
   width: 370px;
   height: 38px;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.ahorro .target .datos .dato {
+@media (max-width: 360px) {
+  .ahorro .datos {
+    width: 280px;
+    height: 36px;
+    gap: 4px;
+  }
+}
+.ahorro .datos .dato {
   width: 370px;
   height: 24px;
   display: flex;
   justify-content: space-between;
 }
-.ahorro .target .datos .dato__costo {
+@media (max-width: 360px) {
+  .ahorro .datos .dato {
+    width: 280px;
+    height: 24px;
+  }
+}
+.ahorro .datos .dato__costo {
   width: 200px;
   height: 24px;
   font-size: 18px;
@@ -243,13 +462,23 @@ body {
   font-weight: 400;
   color: #4F46E5;
 }
-.ahorro .target .datos .dato__span {
+@media (max-width: 360px) {
+  .ahorro .datos .dato__costo {
+    font-size: 14px;
+  }
+}
+.ahorro .datos .dato__span {
   color: #B8B6F7;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
 }
-.ahorro .target .datos .dato__porcentaje {
+@media (max-width: 360px) {
+  .ahorro .datos .dato__span {
+    font-size: 10px;
+  }
+}
+.ahorro .datos .dato__porcentaje {
   width: 29px;
   height: 20px;
   font-size: 14px;
@@ -257,48 +486,108 @@ body {
   font-weight: 400;
   color: #5B6776;
 }
-.ahorro .target .datos .grafico {
+@media (max-width: 360px) {
+  .ahorro .datos .dato__porcentaje {
+    width: 25px;
+    height: 18px;
+    font-size: 12px;
+  }
+}
+.ahorro .datos .grafico {
   display: flex;
   width: 370px;
   height: 10px;
   background-color: #F7F8FD;
 }
-.ahorro .target .datos .grafico__cena {
+@media (max-width: 360px) {
+  .ahorro .datos .grafico {
+    width: 280px;
+    height: 8px;
+  }
+}
+.ahorro .datos .grafico__cena {
   width: 189.4px;
   height: 10px;
   border-radius: 6px;
   background-color: #4F46E5;
 }
-.ahorro .target .datos .grafico__viaje {
+@media (max-width: 360px) {
+  .ahorro .datos .grafico__cena {
+    width: 99.4px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: #4F46E5;
+  }
+}
+.ahorro .datos .grafico__viaje {
   width: 225.5px;
   height: 10px;
   border-radius: 6px;
   background-color: #4F46E5;
 }
-.ahorro .target .datos .grafico__maestria {
+@media (max-width: 360px) {
+  .ahorro .datos .grafico__viaje {
+    width: 140px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: #4F46E5;
+  }
+}
+.ahorro .datos .grafico__maestria {
   width: 283.3px;
   height: 10px;
   border-radius: 6px;
   background-color: #4F46E5;
 }
-.ahorro .target .datos .grafico__almuerzo {
-  width: 187.4px;
+@media (max-width: 360px) {
+  .ahorro .datos .grafico__maestria {
+    width: 196px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: #4F46E5;
+  }
+}
+.ahorro .datos .grafico__almuerzo {
   width: 187.4px;
   height: 10px;
   border-radius: 6px;
   background-color: #4F46E5;
 }
-.ahorro .target .datos .grafico__construir {
+@media (max-width: 360px) {
+  .ahorro .datos .grafico__almuerzo {
+    width: 99.4px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: #4F46E5;
+  }
+}
+.ahorro .datos .grafico__construir {
   width: 337.1px;
   height: 10px;
   border-radius: 6px;
   background-color: #4F46E5;
 }
-.ahorro .target .datos .grafico__donacion {
+@media (max-width: 360px) {
+  .ahorro .datos .grafico__construir {
+    width: 252px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: #4F46E5;
+  }
+}
+.ahorro .datos .grafico__donacion {
   width: 133.8px;
   height: 10px;
   border-radius: 6px;
   background-color: #4F46E5;
+}
+@media (max-width: 360px) {
+  .ahorro .datos .grafico__donacion {
+    width: 56px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: #4F46E5;
+  }
 }
 
 .boton {
@@ -313,6 +602,15 @@ body {
   border: 1px solid #E2E8F0;
   background-color: #F7F8FD;
   gap: 14px;
+}
+@media (max-width: 360px) {
+  .boton {
+    flex-direction: row-reverse;
+    width: 328px;
+    height: 64px;
+    box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.031372549);
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.0784313725);
+  }
 }
 .boton__crear {
   width: 40px;
@@ -333,4 +631,12 @@ body {
   line-height: 24px;
   letter-spacing: -2%;
   color: #4F46E5;
+}
+@media (max-width: 360px) {
+  .boton__texto {
+    width: 112px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+  }
 }/*# sourceMappingURL=app.css.map */

@@ -12,3 +12,25 @@
         flex: 0;
     }
 }
+
+//header
+@mixin normal{
+    @media (max-width: 1400px){
+        .contenedor__img--create{
+            @include mixin-cambios.size-imagen(22.4px, 22.4px);
+            background-image: url('/assets/img/Icon-2.svg');
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+@mixin mobile{
+    @media (max-width: 360px){
+        .contenedor__img--create{
+            background-image: unset;
+            background-image: url(/assets/img/Union.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}

@@ -12,6 +12,14 @@
     border: 1px solid #E2E8F0;
     background-color: #F7F8FD;
     gap: 14px;
+    @media (max-width:360px){
+        flex-direction: row-reverse;
+        width: 328px;
+        height: 64px;
+        box-shadow: 0px 4px 6px -2px #10182808;
+        box-shadow: 0px 12px 16px -4px #10182814;
+
+    }
 
     &__crear{
         width: 40px;
@@ -33,5 +41,11 @@
         line-height: 24px;
         letter-spacing: -2%;
         color: #4F46E5;
+        @media (max-width: 360px){
+            width: 112px;
+            height: 18px;
+            font-size: 12px;
+            line-height: 18px;
+        }
     }
 }

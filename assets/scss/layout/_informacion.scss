@@ -4,12 +4,16 @@
 
 .information{
     display: flex;
-    flex-direction: row;    
-    @include mixin-cambios.size-imagen(calc(100% - 96px), 160px);
-    margin: 0 auto;
+    flex-direction: row;
+    min-width: calc(100% - 96px);
+    height: 160px;
+    margin: 0 auto 30px auto;
     gap: 21px;
-    @include mixin-ahorro-responsive.columnas;
     
+    @media (max-width: 360px){
+        width: calc(100% - 32px);
+        flex-direction: column;
+    }
         .saldo{
             height: 160px;
             @include mixin-ahorro-responsive.saldo;
@@ -22,15 +26,29 @@
             border-radius: 6px;
             position: relative;
             flex: 1;
+            @media (max-width: 360px){
+                height: 87px;
+                padding: 16px 12px;
+                gap: 0;
+            }
             
             .usuario{
                 display: flex;
                 height: 40px;
                 gap: 18px;
-                align-items: center;
+                align-content: center;
                 flex: 1;
+                @media (max-width:360px){
+                    width: 301px;
+                    height: 32px;
+                    gap: 12px;
+                }
                 &__saludo{
-                    @include mixin-cambios.size-imagen(32px, 40px);
+                    @include mixin-cambios.size-imagen(32px, 32px);
+                    @media (max-width: 360px){
+                        width: 18px;
+                        height: 24px;
+                    }
                 }
 
                 &__nombre{
@@ -38,6 +56,16 @@
                     font-weight: 700;
                     font-size: 24px;
                     color: #121212;
+                        @media (max-width: 360px){
+                        width: 83px;
+                        height: 24px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 24px;
+                        letter-spacing: -0.01em;
+                        text-align: left;
+
+                    }
                 }
             }
             
@@ -49,12 +77,25 @@
                 letter-spacing: -2.4%;
                 color: #344055;
                 flex: 1;
+                @media (max-width:360px){
+                    width: 79px;
+                    height: 24px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+
+                }
             }
             &__option{
                 @include mixin-cambios.size-imagen(18px, 18px);
                 position: absolute;
                 top: 16px;
                 right: 16px;
+                @media (max-width:360px){
+                    top: 18px;
+                }
             }
         }
         .retiro{
@@ -67,6 +108,14 @@
             justify-content: space-between;
             padding: 30px 24px;
             position: relative;
+            @media (max-width: 360px){
+                min-width: calc(100% - 32px);
+                height: 92px;
+                padding: 12px 24px;
+                box-shadow: 0px 4px 6px -2px #10182808;
+                box-shadow: 0px 12px 16px -4px #10182814;
+                ;
+            }
             
             .retirar{
                 display: flex;
@@ -74,9 +123,18 @@
                 align-items: center;
                 gap: 10px;
                 @include mixin-cambios.size-imagen(152px, 100px);
-                
+                @media (max-width: 360px){
+                    width: 120px;
+                    height: 68px;
+                    gap: 8px;
+                }
+
                 &__imagen{
                     @include mixin-cambios.size-imagen(64px, 64px);
+                    @media(max-width:360px){
+                        width: 40px;
+                        height: 40px;
+                    }
                 }
                 &__texto{
                     @include mixin-cambios.size-imagen(152px, 20px);
@@ -85,6 +143,11 @@
                     font-size: 14px;
                     line-height: 20px;
                     text-align: center;
+                    @media (max-width: 360px) {
+                        width: 120;
+                        height: 18;
+                        font-size: 12px;
+                    }
                 }
             }
 
@@ -94,6 +157,9 @@
                 position: absolute;
                 top: 0;
                 right: 50%;
+                @media (max-width: 360px){
+                    height: 96px;
+                }
             }
 
         } 

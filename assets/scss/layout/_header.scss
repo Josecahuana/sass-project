@@ -7,18 +7,75 @@
     border-bottom: 1px solid variable.$color-secondary;
     height: 104px;
     padding: 36px 48px;
-
+    @media (max-width: 360px){
+            align-items: center;   
+            height: 52px;
+            padding: 12px 16px;
+    }
     .contenedor{
         display: flex;
+        justify-content: center;
+        align-items: center;
         @include mixin-cambios.size-imagen(83px, 32px);
         gap: 24px;
+        //
+        @media (max-width: 360px){
+                gap: 4px;
+                @include mixin-cambios.size-imagen(93px, 23px);
+                padding: 4px 12px;
+        }
+        &__img--create{
+            width: 22.4px;
+            height: 22.4px;
+            @media (max-width: 1440px){
+                    @include mixin-cambios.size-imagen(22.4px, 22.4px);
+                    background-image: url('/assets/img/Icon-2.svg');
+                    background-repeat: no-repeat;
+            }
+            @media (max-width:360px){
+                    width: 13px;
+                    height: 15px;
+                    background-image: unset;
+                    background-image: url(/assets/img/Union.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+            }
+        }
+  
+        }
+        @media (max-width: 1440px){
+            .contenedor__img--text{
+                @include mixin-cambios.size-imagen(22.4px, 22.4px);
+                background-image: url('/assets/img/Icon-3.svg');
+                background-repeat: no-repeat;
+            }
+        }
 
-        &__imagen{
+        @media (max-width: 360px){ 
+            .contenedor__img--text{
+                background-image: unset;
+                width: 56px;
+                height: 15px;
+            }        
+
+            .contenedor__img--text::before{
+                content: "Ahorra Ya";
+                font-weight: 400;
+                font-style: italic;
+                font-size: 12px;
+                line-height: 14.52px;
+                letter-spacing: -4%;
+                color: #4F46E5;
+                    }
+                }
+            
+
+        &__img{
             @include mixin-cambios.size-imagen(22.4px, 22.4px);
         }
-    }
 
-    &__img{
-        @include mixin-cambios.size-imagen(22.4px, 22.4px);
-    }
-}
+    }   
+
+    
+
+    

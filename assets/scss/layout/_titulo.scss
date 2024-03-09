@@ -1,18 +1,23 @@
-@use '../theme/variable';
-@use '../module/mixin-cambios';
+@use '../theme/variable' as v;
+@use '../module/mixin-cambios' as mc;
 
 .titulo{
     display: flex;
     flex-direction: column;
     height: 140px;
-    // @include mixin-cambios.size-imagen(1440px, 140px);
     gap: 8px;
     padding: 36px 48px;
-    
+    @media (max-width: 360px){
+        height: 85px;
+        padding: 18px 16px;
+        gap: 0;
+        margin-bottom: 5px;
+    }
     &__heading{
-        @include mixin-cambios.titulo-style(383px, 40px, #121212, 700, 32px, 40px, 1);
+        @include mc.titulo-style(383px, 40px, #121212, 700, 32px, 40px, 1);
+
     }
     &__parrafo{
-        @include mixin-cambios.titulo-style(383px, 20px, #586776, 400, 14px, 20px, 0);
+        @include mc.titulo-style(383px, 20px, #586776, 400, 14px, 20px, 0);
     }
 }
